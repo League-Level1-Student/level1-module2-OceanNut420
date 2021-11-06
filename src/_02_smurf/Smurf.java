@@ -15,11 +15,11 @@ package _02_smurf;
 public class Smurf {
 
 	private String name;
-
+	
 	Smurf(String name) {
 		this.name = name;
 	}
-
+	
 	public String getName() {
 		return "My name is " + name + " Smurf.";
 	}
@@ -31,6 +31,10 @@ public class Smurf {
 	// Papa Smurf wears a red hat, all the others are white.
 	public String getHatColor() {
 		// 3. Fill in this method
+		
+		if(name == "PapaSmurf") {
+			return "red";
+		}
 		return "";
 	}
 
@@ -39,7 +43,15 @@ public class Smurf {
 		// 4. Fill in this method
 		return "";
 	}
-
+	
+	public static void main(String[] args) {
+		Smurf Handy = new Smurf("Handy");
+		Smurf PapaSmurf = new Smurf("PapaSmurf");
+		Smurf Smurfette = new Smurf("Smurfette");
+		
+		Handy.eat();
+	}
+	
 }
 
 
